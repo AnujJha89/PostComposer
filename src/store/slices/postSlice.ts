@@ -53,7 +53,7 @@ const deleteUC = new DeletePostUseCase(repo);
 const scheduleUC = new SchedulePostUseCase(repo);
 const validateUC = new ValidatePlatformConstraintsUseCase();
 const postsAdapter = createEntityAdapter<PostResponseDTO>({
-  selectId: (post) => post.id,
+  
   sortComparer: (a, b) =>
     new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
 });
